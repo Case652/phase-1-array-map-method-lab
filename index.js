@@ -11,6 +11,14 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
-}
+const titleCased = () => 
+  tutorials.map(chop => 
+    chop.split(" ").map(cap => 
+      cap[0].toUpperCase() + cap.slice(1)).join(" "))
+
+//regular expressions are intresting but a rabbit hole.
+
+
+//.map() .split() .charAt()=>[] .toUpperCase() .slice .join()=>.join(" ")
+//                            
+//                                                                 
